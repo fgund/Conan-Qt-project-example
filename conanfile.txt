@@ -6,3 +6,9 @@ CMakeDeps
 CMakeToolchain
 
 [options]
+qt:shared=True
+
+[imports]
+bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my "bin" folder
+lib, *.dylib* -> ./bin # Copies all dylib files from packages lib folder to my "bin" folder
+bin/archdatadir/plugins/platforms, *.dll -> ./bin/platforms
